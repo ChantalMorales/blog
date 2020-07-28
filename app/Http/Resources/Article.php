@@ -22,6 +22,7 @@ class Article extends JsonResource
             'body' => $this->body,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'image'=>$this->image,
             'user'=> "/api/users/".$this ->user_id,
             'category'=>"/api/categories/".$this ->category_id,
         ];
