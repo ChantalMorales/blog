@@ -61,4 +61,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsToMany('App\Category')->withTimestamps();
     }
+
+    public function userable()
+    {
+        return $this->morphTo();
+    }
 }
