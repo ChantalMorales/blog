@@ -77,6 +77,12 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsToMany('App\Category')->withTimestamps();
     }
+
+
+    public function userable()
+    {
+        return $this->morphTo();
+
 //    public function isGranted($role)
 //    {
 //        return $role === $this->role || in_array($role, self::ROLES_HIERARCHY[$this->role]);
@@ -107,5 +113,6 @@ class User extends Authenticatable implements JWTSubject
         }
 
         return false;
+
     }
 }
